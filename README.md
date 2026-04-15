@@ -28,14 +28,11 @@ make -C boilerplate ci
 
 ```bash
 sudo ./environment-check.sh        # full check (insmod/rmmod)
-./environment-check.sh --build-only  # build only (no root needed)
-```
 
 ### Running
 
 ```bash
 # Terminal 1 – start the supervisor (root required for namespaces + insmod)
-sudo insmod ./monitor.ko
 sudo ./engine supervisor ./rootfs-base
 
 # Terminal 2 – CLI commands
