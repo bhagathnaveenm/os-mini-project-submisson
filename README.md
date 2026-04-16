@@ -37,7 +37,10 @@ copy memory_hog into /rootfs-alpha/bin similarly for cpu_hog into beta and io_pu
 ### Environment check
 
 ```bash
-sudo ./environment-check.sh        # full check (insmod/rmmod)
+sudo ./environment-check.sh 
+sudo insmod ./monitor.ko
+
+```
 
 ### Running
 
