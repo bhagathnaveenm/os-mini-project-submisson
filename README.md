@@ -20,19 +20,18 @@ A minimal Linux container runtime built from scratch using `clone(2)`, namespace
 
 ```bash
 make all          # builds engine, workload binaries, and monitor.ko
-'''
+```
 
 ###File system
-'''bash
+```bash
 mkdir rootfs-base
 wget https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-minirootfs-3.20.3-x86_64.tar.gz
 tar -xzf alpine-minirootfs-3.20.3-x86_64.tar.gz -C rootfs-base
-'''
-'''bash
+
 cp -a ./rootfs-base ./rootfs-alpha
 cp -a ./rootfs-base ./rootfs-beta
 cp -a ./rootfs-base ./rootfs-gamma
-'''
+```
 copy memory_hog into /rootfs-alpha/bin similarly for cpu_hog into beta and io_pulse into gamma
 
 ### Environment check
